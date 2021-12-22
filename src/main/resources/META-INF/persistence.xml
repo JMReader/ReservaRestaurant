@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+    xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="PersistenceTpFinal">
+        <!-- hay que ver una forma de arreglar esto, no estoy seguro si estas clases indican 
+        que se hará una tabla por cada un de ellas-->
+        <class>ar.edu.unju.escmi.poo.dominio.Agencia</class>
+        <class>ar.edu.unju.escmi.poo.dominio.Cliente</class>
+        <class>ar.edu.unju.escmi.poo.dominio.Encargado</class>
+        <class>ar.edu.unju.escmi.poo.dominio.Mesa</class>
+        <class>ar.edu.unju.escmi.poo.dominio.Mozo</class>
+        <class>ar.edu.unju.escmi.poo.dominio.Particular</class>
+        <class>ar.edu.unju.escmi.poo.dominio.Persona</class>
+        <class>ar.edu.unju.escmi.poo.dominio.Reserva</class>
+        
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/tpfinal?zeroDateTimeBehavior=convertToNull&amp;serverTimezone=UTC"/>
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <property name="javax.persistence.jdbc.password" value="loco2003" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+		<!-- <property name="hibernate.hbm2ddl.auto" value="create-drop"/>-->
+
+
+			  	<property name="hibernate.hbm2ddl.auto" value="update"/> 
+
+
+			<property name = "hibernate.show_sql" value = "true" />
+        </properties>
+    </persistence-unit>
+</persistence>
