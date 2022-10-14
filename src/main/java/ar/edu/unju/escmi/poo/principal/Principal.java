@@ -7,10 +7,13 @@ import ar.edu.unju.escmi.poo.util.MenuUtil;
 
 import ar.edu.unju.escmi.poo.util.IntUtil;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class Principal {
 
 	public static void main(String[] args) {
-		
+		Logger.getLogger("org.hibernate").setLevel(Level.OFF);
 
 		Scanner sc = new Scanner(System.in);
 

@@ -10,6 +10,9 @@ import ar.edu.unju.escmi.poo.dao.IReservaDao;
 import ar.edu.unju.escmi.poo.dominio.Reserva;
 
 public class ReservaDaoImp implements IReservaDao{
+
+
+	
 	private static EntityManager manager = EmfSingleton.getInstance().getEmf().createEntityManager();
 	public void guardarReserva(Reserva reserva) {
 		// TODO Auto-generated method stub

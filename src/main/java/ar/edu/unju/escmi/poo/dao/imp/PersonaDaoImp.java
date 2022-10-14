@@ -30,7 +30,7 @@ public class PersonaDaoImp implements IPersonaDao {
 		
 		Query query = manager.createQuery("SELECT p FROM Persona p ");
 		
-		List<Persona> personas = query.getResultList();
+		List<Persona> personas = (List<Persona>) query.getResultList();
 		
 		return personas;
 	}
@@ -60,7 +60,7 @@ public class PersonaDaoImp implements IPersonaDao {
 
 	public Persona obtenerParticular(long dni) {
 		// TODO Auto-generated method stub
-		// consulta dinámica usando un parámetro para dni de empleado
+		// consulta dinamica usando un parï¿½metro para dni de empleado
 		Query query = manager.createQuery("SELECT p FROM Persona p " + "WHERE p.dni = :dniPersona");
 		query.setParameter("dniPersona", dni);
 		Persona particularEncontrado = (Persona) query.getSingleResult();
@@ -69,7 +69,7 @@ public class PersonaDaoImp implements IPersonaDao {
 
 	public Persona obtenerAgencia(long cuit) {
 		// TODO Auto-generated method stub
-		// consulta dinámica usando un parámetro para dni de empleado
+		// consulta dinï¿½mica usando un parï¿½metro para dni de empleado
 		Query query = manager.createQuery("SELECT p FROM Persona p " + "WHERE p.cuit = :cuitPersona");
 		query.setParameter("cuitPersona", cuit);
 		Persona agenciaEncontrada = (Persona) query.getSingleResult();

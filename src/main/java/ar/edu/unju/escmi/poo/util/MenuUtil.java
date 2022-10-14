@@ -20,9 +20,12 @@ import ar.edu.unju.escmi.poo.dominio.Particular;
 import ar.edu.unju.escmi.poo.dominio.Persona;
 import ar.edu.unju.escmi.poo.dominio.Encargado;
 import ar.edu.unju.escmi.poo.dominio.Reserva;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 public class MenuUtil {
+
 
 	Persona particularEncontrado = null;
 	boolean encontrado = false;
@@ -50,9 +53,9 @@ public class MenuUtil {
 	
 			
 	public void mostrarOpciones() {
-		System.out.println("1 - Hacer reserva"); // terminar esto
+		System.out.println("1 - Hacer reserva");
 		System.out.println("2 - Pagar reserva");
-		System.out.println("3 - Elimina reserva"); // terminar esto
+		System.out.println("3 - Elimina reserva");
 		System.out.println("4 - Mostrar reservas");
 		System.out.println("5 - Dar de alta a un mozo");
 		System.out.println("6 - Mostrar mozos");
